@@ -1,23 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ProjetoLivros
+﻿namespace ProjetoLivros
 {
-    class Autor
+    internal class Autor
     {
+        //Construtor
         public Autor(string nome)
         {
             Nome = nome;
         }
 
-        List<Box> Box = new List<Box>();
+        //Variaveis
+        private List<Box> Box = new List<Box>();
 
+        //Propriedades
         public string Nome { get;}
 
-
+        //Métodos
         public void AddBox(Box box)
         {
             Box.Add(box);

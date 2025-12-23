@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ProjetoLivros
+﻿namespace ProjetoLivros
 {
-    class Capitulo
+    internal class Capitulo
     {
+        //Construtor
         public Capitulo(int numeroCap, string titulo, int numeroPag)
         {
             NumeroCap = numeroCap;
@@ -15,7 +10,8 @@ namespace ProjetoLivros
             NumeroPag = numeroPag;
         }
 
-        List<string> topicos = new List<string>();
+        //Variaveis
+        private List<string> topicos = new List<string>();
 
         //Propriedades
         public int NumeroCap { get; }
@@ -24,10 +20,10 @@ namespace ProjetoLivros
         public string resumo  => $"Título do capítulo {Titulo}, número de capítulos {NumeroCap}, " +
             $"quantidade de pagínas {NumeroPag} e tópicos abordados: {string.Join(", ", topicos)}" ;
 
+        //Métodos
         public void AdicionarTopico(string topico)
         {
             topicos.Add(topico);
         }
-
     }
 }
