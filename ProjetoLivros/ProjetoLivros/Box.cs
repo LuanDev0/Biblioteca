@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ProjetoLivros
+﻿namespace ProjetoLivros
 {
-    class Box
+    internal class Box
     {
-
+        //Construtor
         public Box(string nome)
         {
             Nome = nome;
@@ -22,7 +16,6 @@ namespace ProjetoLivros
         public int MaxPag => livros.Sum(l => l.Paginas);
         public int QuantidadeLivros => livros.Count;
         
-
         //Métodos
         public void AdicionaLivro(Livro livro)
         {

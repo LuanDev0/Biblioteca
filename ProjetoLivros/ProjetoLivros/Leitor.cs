@@ -1,21 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ProjetoLivros
+﻿namespace ProjetoLivros
 {
-    class Leitor
+    internal class Leitor
     {
+        //Construtor
         public Leitor(String nome, int idade)
         {
-
             Nome = nome;
-
             Idade = idade;
         }
 
+        //Propriedades
         public int Id { get; }
         public string Nome { get;  }
         public int Idade { get; }

@@ -1,23 +1,27 @@
 ﻿namespace ProjetoLivros
 {
-    class Livro
+    internal class Livro
     {
-        public Livro(string titulo, Autor autor) 
+        //Construtor
+        public Livro(string titulo, Autor autor, int paginas) 
         {
             Titulo = titulo;
             Autor = autor;
+            Paginas = paginas;
         }
 
+        //Variaveis
         private List<Capitulo> capituloList = new List<Capitulo>();
 
+        //Propriedades
         public string Titulo{ get; }
         public Autor Autor{ get; }
         public int TotalCap => capituloList.Count;
-        public int Paginas { get; set; }
+        public int Paginas { get; }
         public bool Lido { get; set;}
         public string LivroAutor => $"{Titulo} by {Autor}";
-         
-        #region Métodos
+
+        //Métodos
         public void FichaLivro()
         {
             Console.WriteLine($"Título: {Titulo}");
@@ -50,5 +54,4 @@
             Console.WriteLine($"Total de Capitulos: {TotalCap}");
         }
     }
-    #endregion
 }

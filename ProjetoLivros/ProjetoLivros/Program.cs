@@ -3,8 +3,8 @@
 //Instâncias
 Autor autor = new Autor("Kamaitachi");
 
-Livro livro1 = new Livro("Histórias Extraordinárias", autor);
-Livro livro2 = new Livro("Mitologia Nórdica", autor);
+Livro livro1 = new Livro("Histórias Extraordinárias", autor, 447);
+Livro livro2 = new Livro("Mitologia Nórdica", autor, 286);
 
 Leitor leitor1 = new Leitor("Arthur", 22);
 
@@ -14,12 +14,8 @@ Capitulo capitulo = new Capitulo(1, "Ligeia", 30);
 Capitulo capitulo1 = new Capitulo(2, "Astaroth", 50);
 Capitulo capitulo2 = new Capitulo(2, "Vagro", 20);
 
-
 //Setando valores
-livro1.Paginas = 447;
 livro1.Lido = false;
-
-livro2.Paginas = 286;
 livro2.Lido = true;
 
 //Chamada de métodos
@@ -27,7 +23,6 @@ box.AdicionaLivro(livro2);
 box.AdicionaLivro(livro1);
 
 autor.AddBox(box);
-
 
 //desafio
 capitulo.AdicionarTopico("Minha bela esposa");
