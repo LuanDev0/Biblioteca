@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\luana\\source\\repos\\ProjetoLivros\\ProjetoLivros\\ProjetoLivros.csproj": {}
+    "C:\\Users\\luana\\Desktop\\Projetin\\Biblioteca\\ProjetoLivros\\ProjetoLivros\\ProjetoLivros.csproj": {}
   },
   "projects": {
-    "C:\\Users\\luana\\source\\repos\\ProjetoLivros\\ProjetoLivros\\ProjetoLivros.csproj": {
+    "C:\\Users\\luana\\Desktop\\Projetin\\Biblioteca\\ProjetoLivros\\ProjetoLivros\\ProjetoLivros.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luana\\source\\repos\\ProjetoLivros\\ProjetoLivros\\ProjetoLivros.csproj",
+        "projectUniqueName": "C:\\Users\\luana\\Desktop\\Projetin\\Biblioteca\\ProjetoLivros\\ProjetoLivros\\ProjetoLivros.csproj",
         "projectName": "ProjetoLivros",
-        "projectPath": "C:\\Users\\luana\\source\\repos\\ProjetoLivros\\ProjetoLivros\\ProjetoLivros.csproj",
+        "projectPath": "C:\\Users\\luana\\Desktop\\Projetin\\Biblioteca\\ProjetoLivros\\ProjetoLivros\\ProjetoLivros.csproj",
         "packagesPath": "C:\\Users\\luana\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\luana\\source\\repos\\ProjetoLivros\\ProjetoLivros\\obj\\",
+        "outputPath": "C:\\Users\\luana\\Desktop\\Projetin\\Biblioteca\\ProjetoLivros\\ProjetoLivros\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
