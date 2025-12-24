@@ -1,6 +1,6 @@
 ﻿namespace ProjetoLivros
 {
-    internal class Livro
+    abstract class Livro
     {
         //Construtor
         public Livro(string titulo, Autor autor, int paginas) 
@@ -18,7 +18,7 @@
         public Autor Autor{ get; }
         public int TotalCap => capituloList.Count;
         public int Paginas { get; }
-        public bool Lido { get; set;}
+        public bool Lido { get; set; }
         public string LivroAutor => $"{Titulo} by {Autor}";
 
         //Métodos

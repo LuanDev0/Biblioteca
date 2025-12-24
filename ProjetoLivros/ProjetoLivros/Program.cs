@@ -3,8 +3,8 @@
 //Instâncias
 Autor autor = new Autor("Kamaitachi");
 
-Livro livro1 = new Livro("Histórias Extraordinárias", autor, 447);
-Livro livro2 = new Livro("Mitologia Nórdica", autor, 286);
+LivroFisico livro1 = new LivroFisico("Histórias Extraordinárias", autor, 447, true);
+LivroDigital livro2 = new LivroDigital("Mitologia Nórdica", autor, 286, 127);
 
 Leitor leitor1 = new Leitor("Arthur", 22);
 
@@ -35,4 +35,3 @@ livro1.AddCapitulo(capitulo2);
 
 //livro1.ExibirDetalhes();
 
-Console.WriteLine(capitulo.resumo);

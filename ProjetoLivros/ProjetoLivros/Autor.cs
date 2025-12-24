@@ -1,6 +1,6 @@
 ﻿namespace ProjetoLivros
 {
-    internal class Autor
+    internal class Autor : IGeneroPreferido
     {
         //Construtor
         public Autor(string nome)
@@ -13,6 +13,8 @@
 
         //Propriedades
         public string Nome { get;}
+
+        public string GeneroPreferido { get; private set; }
 
         //Métodos
         public void AddBox(Box box)
@@ -29,6 +31,11 @@
                 box.ExibirLivrosBox();
             }
 
+        }
+
+        public void MudarGenero(string novoGenero)
+        {
+            GeneroPreferido = novoGenero;
         }
     }
 }
