@@ -21,7 +21,7 @@
         public bool Lido { get; set; }
         public string LivroAutor => $"{Titulo} by {Autor}";
         public Avaliacao Avaliacao { get; private set; }
-
+        
         //Métodos
         public void FichaLivro()
         {
@@ -58,6 +58,13 @@
         public void AvaliarLivro(int nota, string comentario)
         {
             Avaliacao = new Avaliacao(nota, comentario);
+        }
+
+        public abstract void ExibirTitulo();
+
+        public virtual void DetalhesAdicionais()
+        {
+            Console.WriteLine("Detalhes adicionais não disponíveis para este tipo de livro.");
         }
     }
 }
