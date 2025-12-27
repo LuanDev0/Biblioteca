@@ -13,8 +13,8 @@
 
         //Propriedades
         public string Nome { get;}
-
         public string GeneroPreferido { get; private set; }
+        public Avaliacao Avaliacao { get; private set; }
 
         //Métodos
         public void AddBox(Box box)
@@ -36,6 +36,11 @@
         public void MudarGenero(string novoGenero)
         {
             GeneroPreferido = novoGenero;
+        }
+
+        public void Avaliar(int nota, string comentario)
+        {
+            Avaliacao = new Avaliacao(nota, comentario);
         }
     }
 }

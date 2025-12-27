@@ -17,6 +17,7 @@ Capitulo capitulo2 = new Capitulo(2, "Vagro", 20);
 //Setando valores
 livro1.Lido = false;
 livro2.Lido = true;
+leitor1.Avaliar(10, "Educado");
 
 //Chamada de métodos
 box.AdicionaLivro(livro2);
@@ -32,6 +33,3 @@ capitulo.AdicionarTopico("Putridão");
 livro1.AddCapitulo(capitulo);
 livro1.AddCapitulo(capitulo1);
 livro1.AddCapitulo(capitulo2);
-
-//livro1.ExibirDetalhes();
-

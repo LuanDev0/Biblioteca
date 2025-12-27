@@ -20,6 +20,7 @@
         public int Paginas { get; }
         public bool Lido { get; set; }
         public string LivroAutor => $"{Titulo} by {Autor}";
+        public Avaliacao Avaliacao { get; private set; }
 
         //Métodos
         public void FichaLivro()
@@ -52,6 +53,11 @@
             }
 
             Console.WriteLine($"Total de Capitulos: {TotalCap}");
+        }
+
+        public void AvaliarLivro(int nota, string comentario)
+        {
+            Avaliacao = new Avaliacao(nota, comentario);
         }
     }
 }

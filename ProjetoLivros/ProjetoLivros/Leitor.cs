@@ -13,6 +13,7 @@
         public int Id { get; }
         public string Nome { get;  }
         public int Idade { get; }
+        public Avaliacao Avaliacao { get; private set; }
 
         public string GeneroPreferido { get; private set; }
 
@@ -20,6 +21,11 @@
         public void MudarGenero(string novoGenero)
         {
             GeneroPreferido = novoGenero;
+        }
+
+        public void Avaliar(int nota, string comentario)
+        {
+            Avaliacao = new Avaliacao(nota, comentario);
         }
     }
 }
