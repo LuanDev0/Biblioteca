@@ -1,4 +1,5 @@
 ﻿using ProjetoLivros;
+using ProjetoLivros.Banco;
 
 //Instâncias
 Autor autor = new Autor("Kamaitachi");
@@ -17,6 +18,8 @@ Capitulo capitulo2 = new Capitulo(2, "Vagro", 20);
 Colecao colecao = new Colecao("Favoritos");
 
 BancoDados bancoDados = new BancoDados();
+
+ColecaoDAL colecaoDAL = new ColecaoDAL();
 
 //Setando valores
 livro1.Lido = false;
@@ -41,6 +44,13 @@ livro1.AddCapitulo(capitulo2);
 colecao.AddColecao(livro1);
 colecao.AddColecao(livro2);
 
-var livro = bancoDados.BuscarLivroPeloTitulo("1984");
+//var livro = bancoDados.BuscarLivroPeloTitulo("1984");
 
-Console.WriteLine(livro.Titulo);
+//Console.WriteLine(livro.Titulo);
+
+var colecoes = colecaoDAL.ListarColecoes();
+
+foreach(var colecao1 in colecoes)
+{
+    Console.WriteLine(colecao1.Nome);
+}
