@@ -1,6 +1,6 @@
 ﻿namespace ProjetoLivros
 {
-    internal class LivroFisico : Livro
+    public class LivroFisico : Livro
     {
         //Construtor
         public LivroFisico(string titulo, Autor autor, int paginas, bool capadura) : base(titulo, autor, paginas)
@@ -14,8 +14,10 @@
             Preco = preco;
         }
 
+        public LivroFisico() { }
+
         //Propriedades
-        public bool CapaDura { get; }
+        public bool CapaDura { get; set; }
         public double Preco { get; set; }
 
         //Métodos

@@ -1,6 +1,6 @@
 ﻿namespace ProjetoLivros
 {
-    internal class Box
+    public class Box
     {
         //Construtor
         public Box(string nome)
@@ -8,11 +8,14 @@
             Nome = nome;
         }
 
+        public Box() {}
+
         //Variaveis
         private List<Livro> livros = new List<Livro>();
 
         //Propriedades
-        public string Nome { get;}
+        public int Id { get; set; }
+        public string Nome { get; set; }
         public int MaxPag => livros.Sum(l => l.Paginas);
         public int QuantidadeLivros => livros.Count;
         
