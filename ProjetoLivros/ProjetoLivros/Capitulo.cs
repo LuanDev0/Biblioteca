@@ -1,6 +1,6 @@
 ﻿namespace ProjetoLivros
 {
-    internal class Capitulo
+    public class Capitulo
     {
         //Construtor
         public Capitulo(int numeroCap, string titulo, int numeroPag)
@@ -10,13 +10,16 @@
             NumeroPag = numeroPag;
         }
 
+        public Capitulo() { }
+
         //Variaveis
         private List<string> topicos = new List<string>();
 
         //Propriedades
-        public int NumeroCap { get; }
-        public string Titulo { get; }
-        public int NumeroPag { get; }
+        public int Id { get; set; }
+        public int NumeroCap { get; set; }
+        public string Titulo { get; set; }
+        public int NumeroPag { get; set; }
         public string resumo  => $"Título do capítulo {Titulo}, número de capítulos {NumeroCap}, " +
             $"quantidade de pagínas {NumeroPag} e tópicos abordados: {string.Join(", ", topicos)}" ;
 

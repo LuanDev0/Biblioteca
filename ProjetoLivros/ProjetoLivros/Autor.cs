@@ -1,6 +1,8 @@
-﻿namespace ProjetoLivros
+﻿using ProjetoLivros;
+
+namespace ProjetoLivros
 {
-    internal class Autor : IGeneroPreferido
+    public class Autor : IGeneroPreferido
     {
         //Construtor
         public Autor(string nome)
@@ -8,13 +10,17 @@
             Nome = nome;
         }
 
+        public Autor() { }
+
         //Variaveis
         private List<Box> Box = new List<Box>();
 
         //Propriedades
-        public string Nome { get;}
-        public string GeneroPreferido { get; private set; }
-        public Avaliacao Avaliacao { get; private set; }
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public string GeneroPreferido { get; set; }
+        public Avaliacao Avaliacao { get; set; }
+        public int? AvaliacaoId { get; set; }
 
         //Métodos
         public void AddBox(Box box)

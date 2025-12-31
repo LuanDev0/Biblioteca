@@ -1,6 +1,6 @@
 ﻿namespace ProjetoLivros
 {
-    abstract class Livro
+    public abstract class Livro
     {
         //Construtor
         public Livro(string titulo, Autor autor, int paginas) 
@@ -10,18 +10,23 @@
             Paginas = paginas;
         }
 
+        public Livro() {}
+
         //Variaveis
         private List<Capitulo> capituloList = new List<Capitulo>();
 
         //Propriedades
-        public string Titulo{ get; }
-        public Autor Autor{ get; }
+        public int Id { get; set; }
+        public string Titulo{ get; set; }
+        public Autor Autor{ get; set; }
         public int TotalCap => capituloList.Count;
-        public int Paginas { get; }
+        public int Paginas { get; set; }
         public bool Lido { get; set; }
         public string LivroAutor => $"{Titulo} by {Autor}";
-        public Avaliacao Avaliacao { get; private set; }
-        
+        public Avaliacao Avaliacao { get;  set; }
+        public int AutorId { get; set; }
+        public int? AvaliacaoId { get; set; }
+
         //Métodos
         public void FichaLivro()
         {

@@ -1,6 +1,6 @@
 ﻿namespace ProjetoLivros
 {
-    internal class Leitor : IGeneroPreferido
+    public class Leitor : IGeneroPreferido
     {
         //Construtor
         public Leitor(String nome, int idade)
@@ -9,13 +9,16 @@
             Idade = idade;
         }
 
-        //Propriedades
-        public int Id { get; }
-        public string Nome { get;  }
-        public int Idade { get; }
-        public Avaliacao Avaliacao { get; private set; }
+        public Leitor() { }
 
-        public string GeneroPreferido { get; private set; }
+        //Propriedades
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public int Idade { get; set; }
+        public Avaliacao Avaliacao { get; set; }
+        public string GeneroPreferido { get; set; }
+        public int? AvaliacaoId { get; set; }
+
 
         //Métodos
         public void MudarGenero(string novoGenero)

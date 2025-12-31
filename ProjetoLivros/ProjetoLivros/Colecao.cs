@@ -2,13 +2,18 @@
 {
     public class Colecao
     {
-        public string NomeColecao { get; set; }
+        public int Id { get; set; }
+        public string Nome { get; set; }
 
         private List<Livro> livrosNaColecao = new List<Livro>();
 
+        public Colecao()
+        {            
+        }
+
         public Colecao(string nomeColecao)
         {
-            NomeColecao = nomeColecao;
+            Nome = nomeColecao;
         }
 
         internal void AddColecao(Livro livro)
@@ -18,7 +23,7 @@
 
         public void ExibirColecao()
         {
-            Console.WriteLine($"Coleção: {NomeColecao}");
+            Console.WriteLine($"Coleção: {Nome}");
             foreach (var livro in livrosNaColecao)
             {
                 livro.ExibirTitulo();
