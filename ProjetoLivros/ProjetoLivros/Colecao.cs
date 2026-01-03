@@ -7,9 +7,7 @@
 
         private List<Livro> livrosNaColecao = new List<Livro>();
 
-        public Colecao()
-        {            
-        }
+        public Colecao() { }
 
         public Colecao(string nomeColecao)
         {

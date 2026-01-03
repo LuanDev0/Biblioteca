@@ -7,50 +7,30 @@ Autor autor = new Autor("Kamaitachi");
 LivroFisico livro1 = new LivroFisico("Histórias Extraordinárias", autor, 447, true, 50.10);
 LivroDigital livro2 = new LivroDigital("Mitologia Nórdica", autor, 286, 127);
 
-Leitor leitor1 = new Leitor("Arthur", 22);
-
-Box box = new Box("Contos do Desconhecido");
-
-Capitulo capitulo = new Capitulo(1, "Ligeia", 30);
-Capitulo capitulo1 = new Capitulo(2, "Astaroth", 50);
-Capitulo capitulo2 = new Capitulo(2, "Vagro", 20);
-
-Colecao colecao = new Colecao("Favoritos");
+Colecao colecao = new Colecao("Piores dos melhores") {Id = 2003};
 
 BancoDados bancoDados = new BancoDados();
 
-ColecaoDAL colecaoDAL = new ColecaoDAL();
+var context = new BibliotecaContext();
+
+DAL<Colecao> colecaoDAL = new DAL<Colecao>(context);
 
 //Setando valores
 livro1.Lido = false;
 livro2.Lido = true;
-leitor1.Avaliar(10, "Educado");
-
-//Chamada de métodos
-box.AdicionaLivro(livro2);
-box.AdicionaLivro(livro1);
-
-autor.AddBox(box);
-
-//desafio
-capitulo.AdicionarTopico("Minha bela esposa");
-capitulo.AdicionarTopico("Poder imensuravel");
-capitulo.AdicionarTopico("Putridão");
-
-livro1.AddCapitulo(capitulo);
-livro1.AddCapitulo(capitulo1);
-livro1.AddCapitulo(capitulo2);
 
 colecao.AddColecao(livro1);
 colecao.AddColecao(livro2);
 
-//var livro = bancoDados.BuscarLivroPeloTitulo("1984");
+colecaoDAL.Atualizar(colecao);
 
-//Console.WriteLine(livro.Titulo);
+var colecoes = colecaoDAL.RecuperarPor(x => x.Id == 3);
 
-var colecoes = colecaoDAL.ListarColecoes();
-
-foreach(var colecao1 in colecoes)
+if (colecao != null)
 {
-    Console.WriteLine(colecao1.Nome);
+    Console.WriteLine($"{colecao.Id} - {colecao.Nome}");
+}
+else
+{
+    Console.WriteLine("Coleção não encontrada");
 }
