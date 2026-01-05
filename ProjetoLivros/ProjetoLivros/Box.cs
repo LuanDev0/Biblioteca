@@ -10,24 +10,22 @@
 
         public Box() {}
 
-        //Variaveis
-        private List<Livro> livros = new List<Livro>();
-
         //Propriedades
+        public ICollection<Livro> Livros { get; set; } = new List<Livro>();
         public int Id { get; set; }
         public string Nome { get; set; }
-        public int MaxPag => livros.Sum(l => l.Paginas);
-        public int QuantidadeLivros => livros.Count;
+        public int MaxPag => Livros.Sum(l => l.Paginas);
+        public int QuantidadeLivros => Livros.Count;
         
         //Métodos
         public void AdicionaLivro(Livro livro)
         {
-            livros.Add(livro);
+            Livros.Add(livro);
         }
 
         public void ExibirLivrosBox()
         {
-           foreach(var livro in livros)
+           foreach(var livro in Livros)
             {
                 Console.WriteLine(livro.Titulo);
             }
@@ -37,7 +35,7 @@
         {
             int maxPag = 0;
 
-            foreach(var livro in livros)
+            foreach(var livro in Livros)
             {
                 maxPag += livro.Paginas;
             }
