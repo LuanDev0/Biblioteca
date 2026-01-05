@@ -19,11 +19,5 @@
             Console.WriteLine($"Tamanho do arquivo: {TamanhoArquivoMb} MB");
         }
 
-        public override void ExibirTitulo()
-        {
-            Console.WriteLine($"Titulo : {Titulo}");
-        }
-
-
     }
 }

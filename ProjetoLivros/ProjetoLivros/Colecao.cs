@@ -18,14 +18,6 @@
         {
             livrosNaColecao.Add(livro);
         }
-
-        public void ExibirColecao()
-        {
-            Console.WriteLine($"Coleção: {Nome}");
-            foreach (var livro in livrosNaColecao)
-            {
-                livro.ExibirTitulo();
-            }
-        }
+                
     }
 }

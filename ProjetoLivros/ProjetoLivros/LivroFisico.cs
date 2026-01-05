@@ -33,11 +33,6 @@
             }
         }
         
-        public override void ExibirTitulo()
-        {
-            Console.WriteLine($"Titulo : {Titulo}");
-        }
-
         public override void DetalhesAdicionais()
         {
             Console.WriteLine("Detalhes adicionais disponíveis.");
