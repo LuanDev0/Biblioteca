@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Krona+One&family=Montserrat:ital,wght@0,600;1,600&display=swap');
+
+/*Corpo geral da página*/
+body{
+    background-color: rgb(47, 47, 47);
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+/*Local onde ficará o conteúdo da página*/
+.main{
+    margin: 10% 8%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Seleção de um bloco de conteúdos dentro do Main*/
+.main__conteudo{
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    color: white;
+}
+
+/*Título principal da Seleção do Main*/
+.main__conteudo__titulo{
+    font-size: 32px;
+    color: white;        
+    font-family: 'Krona One', sans-serif;
+}
+
+/*Parte destacada no título principal da Selecao do Main*/
+.titulo-principal-destaque{
+    color: #398757;
+    font-size: 38px;    
+}
+
+/*Parágrafo 1 da seleção do Main*/
+.main__conteudo__texto1{
+    font-size: 16px;
+}
+
+/*Parágrafo 2 da seleção do Main*/
+.main__conteudo__texto2{
+    font-size: 16px;
+}
+
+/*Botões Links*/
+.main__conteudo__links{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Configuração dos botões*/
+.main__conteudo__links__link{
+    background-color: #425676;
+    width: 175px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: large;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
