@@ -1,15 +1,30 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Krona+One&family=Montserrat:ital,wght@0,600;1,600&display=swap');
 
 /*Corpo geral da página*/
 body{
     background-color: rgb(47, 47, 47);
-    height: 100vh;
     box-sizing: border-box;
+    color: white;    
+}
+
+/*Cabeçalho do Menu principal */
+.cabecalho__menu{
+    display: flex;
+    gap: 10px;
+}
+
+/*Links do cabeçalho do Menu principal */
+.cabecalho__menu__Links{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    color: #398757;
+    padding: 2% 0% 0% 8%;
 }
 
 /*Local onde ficará o conteúdo da página*/
 .main{
-    margin: 10% 8%;
+    padding: 2% 8%;
     display: flex;
     align-items: start;
     justify-content: space-between;
@@ -21,8 +36,7 @@ body{
     width: 450px;
     display: flex;
     flex-direction: column;
-    gap: 0px;
-    color: white;
+    gap: 0px;    
 }
 
 /*Título principal da Seleção do Main*/
@@ -51,13 +65,23 @@ body{
 /*Botões Links*/
 .main__conteudo__links{
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
 }
 
-/*Configuração dos botões*/
+/*Configuração do título dos Links*/
+.main__conteudo__links__titulo{
+    font-family: 'Krona One', sans-serif;
+    font-size: 25px;
+    
+}
+
+/*Configuração dos botões dos Links*/
 .main__conteudo__links__link{
-    background-color: #425676;
-    width: 175px;
+    border: 2px solid #398757;
+    width: 200px;
     text-align: center;
     border-radius: 10px;
     font-size: large;
@@ -65,4 +89,25 @@ body{
     text-decoration: none;
     color: white;
     font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column; 
+    gap: 10px;
+}
+
+/* Ação quando mouse passa por cima dos botões */
+.main__conteudo__links__link:hover{
+    background-color: #555555;
+}
+
+/* Rodapé da página */
+.rodape{
+    padding: 20px;
+    color: black;
+    background-color: #398757;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 100;
 }
