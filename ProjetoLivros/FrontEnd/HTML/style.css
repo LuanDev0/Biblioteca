@@ -1,21 +1,20 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Krona+One&family=Montserrat:ital,wght@0,600;1,600&display=swap');
 
 /*Corpo geral da página*/
-body{
+body {
     background-color: rgb(47, 47, 47);
     box-sizing: border-box;
-    color: white;    
+    color: white;
 }
 
 /*Cabeçalho do Menu principal */
-.cabecalho__menu{
+.cabecalho__menu {
     display: flex;
     gap: 10px;
 }
 
 /*Links do cabeçalho do Menu principal */
-.cabecalho__menu__Links{
+.cabecalho__menu__Links {
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
     color: #398757;
@@ -23,7 +22,7 @@ body{
 }
 
 /*Local onde ficará o conteúdo da página*/
-.main{
+.main {
     padding: 2% 8%;
     display: flex;
     align-items: start;
@@ -32,54 +31,55 @@ body{
 }
 
 /*Seleção de um bloco de conteúdos dentro do Main*/
-.main__conteudo{
+.main__conteudo {
     width: 450px;
     display: flex;
     flex-direction: column;
-    gap: 0px;    
+    gap: 0px;
 }
 
 /*Título principal da Seleção do Main*/
-.main__conteudo__titulo{
+.main__conteudo__titulo {
     font-size: 32px;
-    color: white;        
+    color: white;
     font-family: 'Krona One', sans-serif;
+    font-weight: 400;
 }
 
 /*Parte destacada no título principal da Selecao do Main*/
-.titulo-principal-destaque{
+.titulo-principal-destaque {
     color: #398757;
-    font-size: 38px;    
+    font-size: 38px;
+    font-weight: 900;
 }
 
 /*Parágrafo 1 da seleção do Main*/
-.main__conteudo__texto1{
+.main__conteudo__texto1 {
     font-size: 16px;
 }
 
 /*Parágrafo 2 da seleção do Main*/
-.main__conteudo__texto2{
+.main__conteudo__texto2 {
     font-size: 16px;
 }
 
 /*Botões Links*/
-.main__conteudo__links{
+.main__conteudo__links {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     flex-direction: column;
     gap: 10px;
     align-items: center;
 }
 
 /*Configuração do título dos Links*/
-.main__conteudo__links__titulo{
+.main__conteudo__links__titulo {
     font-family: 'Krona One', sans-serif;
     font-size: 25px;
-    
 }
 
 /*Configuração dos botões dos Links*/
-.main__conteudo__links__link{
+.main__conteudo__links__link {
     border: 2px solid #398757;
     width: 200px;
     text-align: center;
@@ -91,23 +91,57 @@ body{
     font-family: 'Montserrat', sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center; 
-    flex-direction: column; 
+    align-items: center;
+    flex-direction: column;
     gap: 10px;
 }
 
-/* Ação quando mouse passa por cima dos botões */
-.main__conteudo__links__link:hover{
+/*Ação quando mouse passa por cima dos botões */
+.main__conteudo__links__link:hover {
     background-color: #555555;
 }
 
-/* Rodapé da página */
-.rodape{
-    padding: 20px;
+/*Rodapé da página */
+.rodape {
+    padding: 8px;
     color: black;
     background-color: #398757;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 75px;
+}
+
+.rodape .rodape-item {
+    min-width: 10px;
+    flex: 1;
+}
+
+/*Div dos links do rodapé */
+.rodape__links {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    color: black;
+    gap: 25px;
+}
+
+/*Links do rodapé da página */
+.rodape__links__link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.main__midias__imagens {
+    clip-path: circle();
 }
