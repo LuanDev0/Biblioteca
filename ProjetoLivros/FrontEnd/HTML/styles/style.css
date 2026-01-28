@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Krona+One&family=Montserrat:ital,wght@0,600;1,600&display=swap');
 
+:root{
+    --cor-primaria: (47, 47, 47);
+    --cor-secundaria: white;
+    --cor-terciaria: 
+}
+
+
 /*Corpo geral da página*/
 body {
     background-color: rgb(47, 47, 47);
