@@ -1,6 +1,4 @@
-﻿using ProjetoLivros;
-
-namespace ProjetoLivros
+﻿namespace ProjetoLivros.Modelos
 {
     public class Autor : IGeneroPreferido
     {

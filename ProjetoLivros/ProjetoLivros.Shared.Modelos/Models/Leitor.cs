@@ -1,4 +1,4 @@
-﻿namespace ProjetoLivros
+﻿namespace ProjetoLivros.Modelos
 {
     public class Leitor : IGeneroPreferido
     {

@@ -1,4 +1,4 @@
-﻿namespace ProjetoLivros
+﻿namespace ProjetoLivros.Modelos
 {
     public class Colecao
     {
@@ -14,7 +14,7 @@
             Nome = nomeColecao;
         }
 
-        internal void AddColecao(Livro livro)
+        public void AddColecao(Livro livro)
         {
             livrosNaColecao.Add(livro);
         }

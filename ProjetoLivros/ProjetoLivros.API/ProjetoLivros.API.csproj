@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProjetoLivros.Shared.Datas\ProjetoLivros.Shared.Datas.csproj" />
+    <ProjectReference Include="..\ProjetoLivros.Shared.Modelos\ProjetoLivros.Shared.Models.csproj" />
+  </ItemGroup>
+
+</Project>
