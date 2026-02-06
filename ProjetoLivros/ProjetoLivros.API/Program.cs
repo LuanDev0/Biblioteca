@@ -1,19 +1,48 @@
+using Microsoft.AspNetCore.Mvc;
 using ProjetoLivros.Banco;
 using ProjetoLivros.Modelos;
+using System.Data.SqlTypes;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<BibliotecaContext>();
+builder.Services.AddTransient<DAL<Colecao>>();
+
 var app = builder.Build();
 
-app.MapGet("/", () =>
+app.MapGet("/Colecoes", ([FromServices] DAL<Colecao> DAL) =>
 {
-    var dal = new DAL<Colecao>(new BibliotecaContext());
-    return dal.RecuperarPor(c => c.Id == 1);
+    var colecao = DAL.ListaRecuperarPor(c => c.Id > 0);
+
+    if(colecao == null)
+    {
+        return Results.NotFound();
+    }
+    else
+    {
+        return Results.Ok(colecao);
+    }
+
 });
 
-app.MapGet("/Colecoes/{Nome}", (string Nome) =>
+app.MapGet("/Colecoes/{Nome}", ([FromServices] DAL < Colecao > DAL, string Nome) =>
 {
-    var dal = new DAL<Colecao>(new BibliotecaContext());
-    return dal.RecuperarPor(c => c.Nome.ToUpper().Equals(Nome.ToUpper()) );
+    var colecao = DAL.RecuperarPor(c => c.Nome.ToUpper().Equals(Nome.ToUpper()) );
+
+    if (colecao == null)
+    {
+        return Results.NotFound();
+    }
+    else
+    {
+        return Results.Ok(colecao);
+    }
+});
+
+app.MapPost("/Colecoes", ([FromServices] DAL < Colecao > DAL, [FromBody]Colecao colecao) =>
+{
+    DAL.Adicionar(colecao);
+    return Results.Ok();
 });
 
 app.Run();
