@@ -9,7 +9,11 @@ Autor autor = new Autor("Kamaitachi");
 LivroFisico livro1 = new LivroFisico("Histórias Extraordinárias", autor, 447, true, 50.10);
 LivroDigital livro2 = new LivroDigital("Mitologia Nórdica", autor, 286, 127);
 
-Colecao colecao = new Colecao("Piores dos melhores");
+Colecao colecao1 = new Colecao("Favoritos");
+
+Colecao colecao2 = new Colecao("Meia bomba");
+
+Colecao colecao3 = new Colecao("Não li");
 
 BancoDados bancoDados = new BancoDados();
 
@@ -21,19 +25,27 @@ DAL<Colecao> colecaoDAL = new DAL<Colecao>(context);
 livro1.Lido = false;
 livro2.Lido = true;
 
-colecao.AddColecao(livro1);
-colecao.AddColecao(livro2);
+colecao1.AddColecao(livro1);
+colecao1.AddColecao(livro2);
 
-colecaoDAL.Adicionar(colecao);
+colecao2.AddColecao(livro1);
+colecao2.AddColecao(livro2);
 
-var colecoes = colecaoDAL.RecuperarPor(x => x.Id == 1);
+colecao3.AddColecao(livro1);
+colecao3.AddColecao(livro2);
 
-if (colecao != null)
-{
-    Console.WriteLine($"{colecao.Id} - {colecao.Nome}");
-}
-else
-{
-    Console.WriteLine("Coleção não encontrada");
-}
+colecaoDAL.Adicionar(colecao1);
+colecaoDAL.Adicionar(colecao2);
+colecaoDAL.Adicionar(colecao3);
+
+//var colecoes = colecaoDAL.RecuperarPor(x => x.Id == 1);
+
+//if (colecao != null)
+//{
+//    Console.WriteLine($"{colecao.Id} - {colecao.Nome}");
+//}
+//else
+//{
+//    Console.WriteLine("Coleção não encontrada");
+//}
 

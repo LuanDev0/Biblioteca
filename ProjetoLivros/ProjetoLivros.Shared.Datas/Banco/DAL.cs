@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ProjetoLivros.Banco
 {
@@ -38,5 +40,9 @@ namespace ProjetoLivros.Banco
             return context.Set<T>().FirstOrDefault(condicao);
         }
 
+        public IEnumerable<T> ListaRecuperarPor(Func<T, bool> condicao)
+        {
+            return context.Set<T>().Where(condicao).ToList();
+        }
     }
 }
