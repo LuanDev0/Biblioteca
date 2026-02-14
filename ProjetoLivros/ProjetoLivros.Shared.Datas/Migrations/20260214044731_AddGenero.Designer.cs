@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjetoLivros.Banco;
 
@@ -11,9 +12,11 @@ using ProjetoLivros.Banco;
 namespace ProjetoLivros.Migrations
 {
     [DbContext(typeof(BibliotecaContext))]
-    partial class BibliotecaContextModelSnapshot : ModelSnapshot
+    [Migration("20260214044731_AddGenero")]
+    partial class AddGenero
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,21 +24,6 @@ namespace ProjetoLivros.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("GeneroLivro", b =>
-                {
-                    b.Property<int>("GenerosId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("LivroId")
-                        .HasColumnType("int");
-
-                    b.HasKey("GenerosId", "LivroId");
-
-                    b.HasIndex("LivroId");
-
-                    b.ToTable("GeneroLivro");
-                });
 
             modelBuilder.Entity("ProjetoLivros.Modelos.Autor", b =>
                 {
@@ -256,21 +244,6 @@ namespace ProjetoLivros.Migrations
                         .HasColumnType("float");
 
                     b.HasDiscriminator().HasValue("Fisico");
-                });
-
-            modelBuilder.Entity("GeneroLivro", b =>
-                {
-                    b.HasOne("ProjetoLivros.Shared.Models.Models.Genero", null)
-                        .WithMany()
-                        .HasForeignKey("GenerosId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ProjetoLivros.Modelos.Livro", null)
-                        .WithMany()
-                        .HasForeignKey("LivroId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("ProjetoLivros.Modelos.Autor", b =>
