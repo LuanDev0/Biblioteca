@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProjetoLivros.Modelos;
+using ProjetoLivros.Shared.Models.Models;
 
 namespace ProjetoLivros.Banco
 {
@@ -14,6 +15,7 @@ namespace ProjetoLivros.Banco
         public DbSet<Livro> Livros { get; set; }
         public DbSet<LivroFisico> LivrosFisicos { get; set; }
         public DbSet<LivroDigital> LivrosDigitais { get; set; }
+        public DbSet<Genero> Generos { get; set; }
 
         private string connectionString = "Data Source=localhost;Initial Catalog=Biblioteca;Integrated Security=True;Encrypt=False;TrustServerCertificate=True";
     
@@ -21,12 +23,17 @@ namespace ProjetoLivros.Banco
         {
             optionsBuilder.UseSqlServer(connectionString);
         }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Livro>()
                 .HasDiscriminator<string>("TipoLivro")
                 .HasValue<LivroDigital>("Digital")
                 .HasValue<LivroFisico>("Fisico");
+
+            modelBuilder.Entity<Livro>()
+                .HasMany(c => c.Generos)
+                .WithMany(c => c.Livro);
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace ProjetoLivros.Modelos
+﻿using ProjetoLivros.Shared.Models.Models;
+
+namespace ProjetoLivros.Modelos
 {
     public class Livro
     {
@@ -7,6 +9,18 @@
         {
             Titulo = titulo;
             Autor = autor;
+            Paginas = paginas;
+        }
+
+        public Livro(string titulo, int paginas)
+        {
+            Titulo = titulo;
+            Paginas = paginas;
+        }
+
+        public Livro(string titulo, int paginas, bool lido)
+        {
+            Titulo = titulo;
             Paginas = paginas;
         }
 
@@ -28,6 +42,8 @@
         public int? AutorId { get; set; }
         public int? AvaliacaoId { get; set; }
         public int? BoxId { get; set; }
+
+        public virtual ICollection<Genero> Generos { get; set; }
 
         //Métodos
         public void FichaLivro()
