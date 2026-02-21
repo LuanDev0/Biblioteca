@@ -1,5 +1,5 @@
 ﻿namespace ProjetoLivros.API.Requests
 {
-    public record LivroRequest(string titulo, int paginas, bool lido);
+    public record LivroRequest(string titulo, int paginas, bool lido, ICollection<GeneroRequest> Generos = null);
     
 }
