@@ -1,0 +1,16 @@
+/*Cabeçalho do Menu principal */
+.header__menu {
+    display: flex;
+    gap: 0px;
+    background-color: var(--cor-terciaria);
+    justify-content: left;
+}
+
+/*Links do cabeçalho do Menu principal */
+.header__menu__Links {
+    font-family: var(--font-principal);
+    font-size: 25px;
+    color: var(--cor-quaternaria) ;
+    padding: 1% 0% 1% 8%;
+    text-decoration: none;
+} 
