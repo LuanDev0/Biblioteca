@@ -1,0 +1,164 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Krona+One&family=Montserrat:ital,wght@0,600;1,600&display=swap');
+
+:root{
+    --cor-primaria: rgb(47, 47, 47);
+    --cor-secundaria: white;
+    --cor-terciaria: #398757;
+    --cor-quaternaria: black;
+    --cor-hover: #555555;
+
+    --font-principal : 'Montserrat', sans-serif;;
+    --font-secundaria : 'Krona One', sans-serif;
+}
+
+/*Corpo geral da página*/
+body {
+    background-color:var(--cor-primaria) ;
+    box-sizing: border-box;
+    color: var(--cor-secundaria) ;
+}
+
+/*Cabeçalho do Menu principal */
+.cabecalho__menu {
+    display: flex;
+    gap: 0px;
+    background-color: var(--cor-terciaria);
+    justify-content: left;
+}
+
+/*Links do cabeçalho do Menu principal */
+.cabecalho__menu__Links {
+    font-family: var(--font-principal);
+    font-size: 25px;
+    color: var(--cor-quaternaria) ;
+    padding: 1% 0% 1% 8%;
+    text-decoration: none;
+}
+
+/*Local onde ficará o conteúdo da página*/
+.main {
+    padding: 2% 8%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    font-family: var(--font-principal);
+    gap: 100px;
+}
+
+/*Seleção de um bloco de conteúdos dentro do Main*/
+.main__conteudo {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+/*Título principal da Seleção do Main*/
+.main__conteudo__titulo {
+    font-size: 32px;
+    color: var(--cor-secundaria) ;
+    font-family: var(--font-secundaria);
+    font-weight: 400;
+}
+
+/*Parte destacada no título principal da Selecao do Main*/
+.titulo-principal-destaque {
+    color: var(--cor-terciaria) ;
+    font-size: 38px;
+    font-weight: 900;
+}
+
+/*Parágrafo 1 da seleção do Main*/
+.main__conteudo__texto {
+    font-size: 20px;
+}
+
+/*Botões Links*/
+.main__conteudo__links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+/*Configuração do título dos Links*/
+.main__conteudo__links__titulo {
+    font-family: var(--font-secundaria);
+    font-size: 25px;
+}
+
+/*Configuração dos botões dos Links*/
+.main__conteudo__links__link {
+    border: 2px solid var(--cor-terciaria) ;
+    width: 200px;
+    text-align: center;
+    border-radius: 25px;
+    font-size: large;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--cor-secundaria) ;
+    font-family: var(--font-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/*Ação quando mouse passa por cima dos botões */
+.main__conteudo__links__link:hover {
+    background-color: var(--cor-hover);
+}
+
+/*Rodapé da página */
+.rodape {
+    padding: 8px;
+    color: var(--cor-quaternaria);
+    background-color: var(--cor-terciaria) ;
+    text-align: center;
+    font-family: var(--font-principal);
+    font-size: 16px;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 75px;
+}
+
+.rodape .rodape-item {
+    min-width: 10px;
+    flex: 1;
+}
+
+/*Div dos links do rodapé */
+.rodape__links {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    color: var(--cor-quaternaria);
+    gap: 25px;
+}
+
+/*Links do rodapé da página */
+.rodape__links__link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-quaternaria);
+}
+
+
+.main__midias__imagens {
+    border-radius: 25px;
+}
+
+
+.main__midias__perfil{
+    clip-path: circle();
+}
