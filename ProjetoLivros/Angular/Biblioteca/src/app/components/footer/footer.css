@@ -1,0 +1,57 @@
+/*Rodapé da página */
+.footer {
+    padding: 8px;
+    color: var(--cor-quaternaria);
+    background-color: var(--cor-terciaria) ;
+    text-align: center;
+    font-family: var(--font-principal);
+    font-size: 16px;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 75px;
+}
+/* 
+.footer.footer-item {
+    min-width: 10px;
+    flex: 1;
+} */
+
+/*Div dos links do rodapé */
+.footer__links {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    color: var(--cor-quaternaria);
+    gap: 25px;
+}
+
+/*Links do rodapé da página */
+.footer__links__link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-quaternaria);
+}
+
+/* Garante que os três blocos ocupem o mesmo espaço */
+.footer-item {
+    flex: 1;
+    display: flex;
+}
+
+/* Centraliza o texto no bloco do meio */
+.footer-item.center {
+    justify-content: center;
+    white-space: nowrap; /* Evita que o nome quebre linha */
+}
+
+/* Alinha os links à direita dentro do bloco deles */
+.footer-item.footer__links {
+    justify-content: flex-end;
+}

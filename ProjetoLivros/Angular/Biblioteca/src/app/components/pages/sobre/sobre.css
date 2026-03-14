@@ -1,0 +1,5 @@
+.main__midias__perfil{
+    clip-path: circle();
+    width: 500px;
+    height: 500px;
+}

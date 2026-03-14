@@ -1,0 +1,15 @@
+
+/*Título principal da Seleção do Main*/
+.main__conteudo__titulo {
+    font-size: 32px;
+    color: var(--cor-secundaria) ;
+    font-family: var(--font-secundaria);
+    font-weight: 400;
+}
+
+/*Parte destacada no título principal da Selecao do Main*/
+.titulo-principal-destaque {
+    color: var(--cor-terciaria) ;
+    font-size: 38px;
+    font-weight: 900;
+}
