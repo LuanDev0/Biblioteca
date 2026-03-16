@@ -13,7 +13,7 @@ namespace ProjetoLivros.API.Endpoints
         {
             app.MapGet("/Livros", ([FromServices] DAL<Livro> DAL) =>
             {
-                var livro = DAL.ListaRecuperarPor(l => l.Titulo != "Melações melosas");
+                var livro = DAL.ListaRecuperarPor(l => l.Titulo != "");
 
                 if(livro == null)
                 {
