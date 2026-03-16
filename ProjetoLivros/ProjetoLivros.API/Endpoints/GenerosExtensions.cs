@@ -10,9 +10,9 @@ namespace ProjetoLivros.API.Endpoints
     {
         public static void AddEndPointsGeneros(this WebApplication app)
         {
-            app.MapGet("/Genero", ([FromServices] DAL<Genero> DAL) =>
+            app.MapGet("/Generos", ([FromServices] DAL<Genero> DAL) =>
             {
-                var genero = DAL.RecuperarPor(g => g.Nome != "");
+                var genero = DAL.ListaRecuperarPor(g => g.Nome != "");
 
                 if (genero == null)
                 {

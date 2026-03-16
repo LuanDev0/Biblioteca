@@ -1,0 +1,17 @@
+<!-- <pre>{{ listaGeneros() | json }}</pre> -->
+
+<main>
+    <h1 class="main__conteudo__titulo item-center">Escolha uma das categorias</h1>
+
+    <div class="main__conteudo__links grid">
+        
+        @for (genero of generosOrdenados(); track genero.id) {
+            <a class="main__conteudo__links__link">
+                {{ genero.nome }}
+            </a>
+        } @empty {
+            <p>Carregando ou nenhum gênero encontrado...</p>
+        }
+
+    </div>
+</main>
