@@ -1,0 +1,53 @@
+
+.main__conteudo__paineis {
+    border: 2px solid var(--cor-terciaria);
+    width: 100%;
+    border-radius: 10px;
+    font-size: large;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: var(--font-principal);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 10px;
+}
+
+.main__conteudo__botoes {
+    border: 2px solid var(--cor-terciaria);
+    width: 3000px;
+    height: max-content;
+    text-align: center;
+    border-radius: 10px;
+    font-size: large;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: var(--font-principal);
+    display: flex;
+    /* justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+    gap: 10px;
+}
+
+.main__conteudo__paineis__titulos {
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+.main__conteudo__paineis__direcao__adiciona {
+
+    text-align: right;
+
+}
+
+
+.main__conteudo__paineis__direcao__texto {
+
+    text-align: left;
+}
