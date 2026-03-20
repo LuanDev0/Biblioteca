@@ -1,4 +1,3 @@
-
 .main__conteudo__paineis {
     border: 2px solid var(--cor-terciaria);
     width: 100%;
@@ -18,8 +17,6 @@
 
 .main__conteudo__botoes {
     border: 2px solid var(--cor-terciaria);
-    width: 3000px;
-    height: max-content;
     text-align: center;
     border-radius: 10px;
     font-size: large;
@@ -28,9 +25,6 @@
     color: var(--cor-secundaria);
     font-family: var(--font-principal);
     display: flex;
-    /* justify-content: center;
-    align-items: center;
-    flex-direction: column; */
     gap: 10px;
 }
 
@@ -41,13 +35,23 @@
 }
 
 .main__conteudo__paineis__direcao__adiciona {
-
     text-align: right;
-
 }
 
-
 .main__conteudo__paineis__direcao__texto {
-
     text-align: left;
+}
+
+.main__conteudo__botoes:hover {
+    background-color: var(--cor-hover);
+}
+
+.main__conteudo__paineis {
+  height: 70px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.main__conteudo__paineis.expandido {
+  height: 350px;
 }

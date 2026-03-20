@@ -1,5 +1,5 @@
 import { Component, OnInit, signal, computed } from '@angular/core';
-import { Api } from '../../../services/api';
+import { Api } from '../../core/services/api';
 import { CommonModule } from '@angular/common';
 
 @Component({

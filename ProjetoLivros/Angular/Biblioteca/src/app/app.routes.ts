@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
-import { Inicio } from './components/pages/inicio/inicio';
-import { Sobre } from './components/pages/sobre/sobre';
-import { Prateleira } from './components/pages/prateleira/prateleira';
-import { Configuracoes } from './components/pages/configuracoes/configuracoes';
+import { Inicio } from './pages/inicio/inicio';
+import { Sobre } from './pages/sobre/sobre';
+import { Prateleira } from './pages/prateleira/prateleira';
+import { Configuracoes } from './pages/configuracoes/configuracoes';
 
 export const routes: Routes = [
 
