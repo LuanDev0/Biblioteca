@@ -1,9 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output, Input } from '@angular/core';
 
 @Component({
   selector: 'app-botao-painel',
-  imports: [],
+  standalone: true,
   templateUrl: './botao-painel.html',
-  styleUrl: './botao-painel.css',
+  styleUrl: './botao-painel.css'
 })
-export class BotaoPainel {}
+export class BotaoPainelComponent {
+
+  @Input() expandido: boolean = false;
+  @Output() clicado = new EventEmitter<void>();
+
+  clicar() {
+    this.clicado.emit();
+  }
+}

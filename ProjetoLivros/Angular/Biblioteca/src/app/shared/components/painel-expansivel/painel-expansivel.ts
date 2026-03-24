@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-painel-expansivel',
@@ -7,10 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './painel-expansivel.html',
   styleUrls: ['./painel-expansivel.css'],
 })
-export class PainelExpansivel {
-  expandido = false;
-
-  toggle() {
-    this.expandido = !this.expandido;
-  }
+export class PainelExpansivelComponent {
+  @Input() expandido: boolean = false;
 }

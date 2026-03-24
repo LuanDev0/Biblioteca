@@ -1,1 +1,10 @@
-<app-painel-expansivel></app-painel-expansivel>
+<app-painel-expansivel 
+  [expandido]="expandido"
+  [largura]="larguraPainel">
+
+  <app-botao-painel
+    [expandido]="expandido"
+    (clicado)="togglePainel()">
+  </app-botao-painel>
+
+</app-painel-expansivel>
