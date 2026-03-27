@@ -1,10 +1,8 @@
-<app-painel-expansivel 
-  [expandido]="expandido"
-  [largura]="larguraPainel">
-
-  <app-botao-painel
-    [expandido]="expandido"
-    (clicado)="togglePainel()">
-  </app-botao-painel>
-
-</app-painel-expansivel>
+<mat-accordion>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            Título
+        </mat-expansion-panel-header>
+        Conteúdo aqui
+    </mat-expansion-panel>
+</mat-accordion>
