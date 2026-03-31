@@ -19,24 +19,24 @@ BancoDados bancoDados = new BancoDados();
 
 var context = new BibliotecaContext();
 
-DAL<Colecao> colecaoDAL = new DAL<Colecao>(context);
+//DAL<Colecao> colecaoDAL = new DAL<Colecao>(context);
 
-//Setando valores
-livro1.Lido = false;
-livro2.Lido = true;
+////Setando valores
+//livro1.Lido = false;
+//livro2.Lido = true;
 
-colecao1.AddColecao(livro1);
-colecao1.AddColecao(livro2);
+//colecao1.AddColecao(livro1);
+//colecao1.AddColecao(livro2);
 
-colecao2.AddColecao(livro1);
-colecao2.AddColecao(livro2);
+//colecao2.AddColecao(livro1);
+//colecao2.AddColecao(livro2);
 
-colecao3.AddColecao(livro1);
-colecao3.AddColecao(livro2);
+//colecao3.AddColecao(livro1);
+//colecao3.AddColecao(livro2);
 
-colecaoDAL.Adicionar(colecao1);
-colecaoDAL.Adicionar(colecao2);
-colecaoDAL.Adicionar(colecao3);
+//colecaoDAL.Adicionar(colecao1);
+//colecaoDAL.Adicionar(colecao2);
+//colecaoDAL.Adicionar(colecao3);
 
 //var colecoes = colecaoDAL.RecuperarPor(x => x.Id == 1);
 

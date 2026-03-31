@@ -1,19 +1,34 @@
 @import "@angular/material/prebuilt-themes/azure-blue.css";
 
 .config-container {
-    max-width: 800px;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    width: 100%;
+    height: fit-content;
+
     margin: 2rem auto;
     padding: 0 1rem;
 }
 
 h1 {
-    color: #333;
+    color: #ffffff;
     font-family: sans-serif;
     margin-bottom: 1.5rem;
     font-weight: 300;
 }
 
 .main-configuracao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1rem;
+    width: 100%;
+
     background: #f9f9f9;
     padding: 20px;
     border-radius: 12px;
