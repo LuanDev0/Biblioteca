@@ -1,14 +1,15 @@
-<main class="main">
-    <div class="main__conteudo__paineis painel">
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      {{ titulo() }}
+    </mat-panel-title>
+    @if (descricao()) {
+      <mat-panel-description>
+        {{ descricao() }}
+      </mat-panel-description>
+    }
+  </mat-expansion-panel-header>
 
-            <div class="main__conteudo__paineis__direcao__texto">
-                <p class="main__conteudo__paineis__titulos">
-                    Configuração de Genêros
-                </p>
-            </div>
+  <ng-content></ng-content>
 
-            <div class="main__conteudo__paineis__direcao__adiciona main__conteudo__botoes">
-                <ng-content></ng-content>
-            </div>
-    </div>
-</main>
+</mat-expansion-panel>

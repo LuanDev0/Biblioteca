@@ -1,8 +1,33 @@
-<mat-accordion>
-    <mat-expansion-panel>
-        <mat-expansion-panel-header>
-            Título
-        </mat-expansion-panel-header>
-        Conteúdo aqui
-    </mat-expansion-panel>
-</mat-accordion>
+<div class="config-container">
+  <h1>Configurações do Sistema</h1>
+
+  <div class="main-configuracao">
+    <mat-accordion multi="true">
+      
+      <app-painel-expansivel titulo="Adicionar Gênero">
+        <div class="panel-content">
+          <p>Adicione um novo Gênero à prateleira</p>
+          <input type="text" placeholder="Ex: Fantasia Medieval" class="config-input">
+          <button mat-raised-button color="warn">Adicionar Gênero</button>
+        </div>
+      </app-painel-expansivel>
+
+      <app-painel-expansivel titulo="Adicionar Livro">
+        <div class="panel-content">
+          <p>Adicione um novo Livro ao catálogo</p>
+          <input type="text" placeholder="Ex: O Hobbit" class="config-input">
+          <button mat-raised-button color="warn">Adicionar Livro</button>
+        </div>
+      </app-painel-expansivel>
+
+      <app-painel-expansivel titulo="Adicionar Autor">
+        <div class="panel-content">
+          <p>Adicione um novo Autor à academia</p>
+          <input type="text" placeholder="Ex: J.R.R. Tolkien" class="config-input">
+          <button mat-raised-button color="warn">Adicionar Autor</button>
+        </div>
+      </app-painel-expansivel>
+
+    </mat-accordion>
+  </div>
+</div>

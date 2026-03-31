@@ -1,1 +1,47 @@
+@import "@angular/material/prebuilt-themes/azure-blue.css";
 
+.config-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h1 {
+    color: #333;
+    font-family: sans-serif;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+.main-configuracao {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Estilizando o conteúdo dentro do painel */
+app-painel-expansivel {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box; /* Garante que o padding não quebre a largura */
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #f44336; /* Cor aproximada do 'warn' do Material */
+}
+
+button {
+    width: 100%;
+    margin-top: 10px;
+}
