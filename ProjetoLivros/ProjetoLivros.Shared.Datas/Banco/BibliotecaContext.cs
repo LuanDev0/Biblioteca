@@ -17,7 +17,7 @@ namespace ProjetoLivros.Banco
         public DbSet<LivroDigital> LivrosDigitais { get; set; }
         public DbSet<Genero> Generos { get; set; }
 
-        private string connectionString = "Data Source=localhost;Initial Catalog=Biblioteca;Integrated Security=True;Encrypt=False;TrustServerCertificate=True";
+        private string connectionString = "Server=INFO-DB-PROD;Database=Infodesenvolvimento;User Id=sistema;Password=*Master@1234567#;TrustServerCertificate=True;";
     
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

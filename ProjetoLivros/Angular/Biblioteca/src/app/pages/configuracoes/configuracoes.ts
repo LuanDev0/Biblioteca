@@ -11,7 +11,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     BotaoPainelComponent,
     MatExpansionModule
   ],
-  templateUrl: './configuracoes.html'
+  templateUrl: './configuracoes.html',
+  styleUrl: './configuracoes.css'
 })
 export class ConfiguracoesComponent {
   
