@@ -1,4 +1,4 @@
-.main__conteudo__paineis {
+/* .main__conteudo__paineis {
     border: 2px solid var(--cor-terciaria);   
     border-radius: 10px;
     font-size: large;
@@ -9,7 +9,6 @@
     gap: 10px;
     overflow: hidden;
     
-    /* Tão suave */
     display: flex;
     justify-content: space-between; 
     align-items: center;
@@ -56,4 +55,4 @@
 
 .main__conteudo__paineis__direcao__texto {
     text-align: left;
-}
+} */
