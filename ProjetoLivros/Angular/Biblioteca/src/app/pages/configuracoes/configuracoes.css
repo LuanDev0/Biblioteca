@@ -23,22 +23,22 @@ h1 {
 
 .main-configuracao {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
 
     gap: 1rem;
     width: 100%;
 
     background: #f9f9f9;
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    /* box-shadow: 0 4px 6px rgba(0,0,0,0.05); */
 }
 
 /* Estilizando o conteúdo dentro do painel */
 app-painel-expansivel {
-    display: block;
-    margin-bottom: 10px;
+    display:block  ;
+    margin-bottom: 15px;
 }
 
 input {
@@ -58,5 +58,5 @@ input:focus {
 
 button {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 5px;
 }
