@@ -16,7 +16,7 @@
 
 h1 {
     color: #ffffff;
-    font-family: sans-serif;
+    font-family: Krona One;
     margin-bottom: 1.5rem;
     font-weight: 300;
 }
@@ -27,7 +27,7 @@ h1 {
     justify-content: left;
 
     gap: 1rem;
-    width: 100%;
+    width: 94VW;
 
     background: #f9f9f9;
     padding: 20px;
@@ -39,8 +39,10 @@ h1 {
 app-painel-expansivel {
     display:block  ;
     margin-bottom: 15px;
+    width: 94vw;
 }
 
+/* Região onde insere dados */
 input {
     width: 100%;
     padding: 12px;
@@ -52,8 +54,9 @@ input {
     transition: border-color 0.3s;
 }
 
+/* Cor em volta do Input */
 input:focus {
-    border-color: #f44336; /* Cor aproximada do 'warn' do Material */
+    border-color: #f44336;
 }
 
 button {
