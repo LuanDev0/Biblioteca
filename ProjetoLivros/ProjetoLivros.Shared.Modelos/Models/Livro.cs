@@ -30,11 +30,11 @@ namespace ProjetoLivros.Modelos
         private List<Capitulo> capituloList = new List<Capitulo>();
 
         //Propriedades
-        public int Id { get; set; } 
+        public int Id { get; set; }
         public string Titulo{ get; set; }
         public int TotalCap => capituloList.Count;
         public int Paginas { get; set; }
-        public bool Lido { get; set; }
+        public bool Lido { get; set; } //Tirar quando possivel
         public string LivroAutor => $"{Titulo} by {Autor}";
         public Autor Autor{ get; set; }
         public Avaliacao Avaliacao { get;  set; }

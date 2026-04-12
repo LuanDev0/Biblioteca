@@ -3,24 +3,59 @@
 
   <div class="main-configuracao">
     <mat-accordion multi="true">
-      
-      <app-painel-expansivel titulo="Adicionar Gênero">
-        <div class="panel-content">
-          <p>Adicione um novo Gênero à prateleira</p>
-          <input type="text" placeholder="Ex: Fantasia Medieval" class="config-input">
-          <button mat-raised-button color="warn">Adicionar Gênero</button>
-        </div>
-      </app-painel-expansivel>
+
+
+
+
+
+
+
+
 
       <app-painel-expansivel titulo="Adicionar Livro">
         <div class="panel-content">
-          <p>Nome:</p>
+          <p>Título:</p>
           <input type="text" placeholder="Ex: O Hobbit" class="config-input">
-          <p>Descrição:</p>
-          <input type="text" placeholder="Ex: Fantasia Medieval" class="config-input">
+
+
+
+
+
+
+          <p>Total de páginas:</p>
+          <input type="text" placeholder="Ex: 348" class="config-input" (keypress)="apenasNumeros($event)">
+
+
+
+
+
+          <p>Descrição breve:</p>
+          <input type="text" placeholder="Ex: Fantasia de aventura na idade média" class="config-input">
+
+          <p>Código da última tecla pressionada: **{{ ultimoCodigo }}**</p>
+
+          <input type="text" class="config-input" (keypress)="verificarTecla($event)">
+
           <button mat-raised-button color="warn">Adicionar Livro</button>
         </div>
       </app-painel-expansivel>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <app-painel-expansivel titulo="Adicionar Autor">
         <div class="panel-content">
@@ -30,7 +65,15 @@
         </div>
       </app-painel-expansivel>
 
+      <app-painel-expansivel titulo="Adicionar Gênero">
+        <div class="panel-content">
+          <p>Nome:</p>
+          <input type="text" placeholder="Ex: Fantasia Medieval" class="config-input">
+          <p>Descrição:</p>
+          <input type="text" placeholder="Gênero que retrata situações da idade média" class="config-input">
+          <button mat-raised-button color="warn">Adicionar Gênero</button>
+        </div>
+      </app-painel-expansivel>
     </mat-accordion>
   </div>
 </div>
-
