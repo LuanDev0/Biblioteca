@@ -35,10 +35,6 @@ export class ConfiguracoesComponent {
     return true;
   }
 
-
-
-
-
   verificarTecla(event: any) {
     const charCode = (event.which) ? event.which : event.keyCode;
     
@@ -51,9 +47,5 @@ export class ConfiguracoesComponent {
     }
     return true;
   }
-
-
-
-
 
 }
