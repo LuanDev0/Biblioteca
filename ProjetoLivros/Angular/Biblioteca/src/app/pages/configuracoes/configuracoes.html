@@ -4,68 +4,28 @@
   <div class="main-configuracao">
     <mat-accordion multi="true">
 
-
-
-
-
-
-
-
-
       <app-painel-expansivel titulo="Adicionar Livro">
         <div class="panel-content">
           <p>Título:</p>
           <input type="text" placeholder="Ex: O Hobbit" class="config-input">
-
-
-
-
-
-
           <p>Total de páginas:</p>
           <input type="text" placeholder="Ex: 348" class="config-input" (keypress)="apenasNumeros($event)">
-
-
-
-
-
+          <p>Nome Autor:</p>
+          <input type="text" placeholder="Ex: J.R.R. Tolkien" class="config-input">
           <p>Descrição breve:</p>
           <input type="text" placeholder="Ex: Fantasia de aventura na idade média" class="config-input">
-
           <p>Código da última tecla pressionada: **{{ ultimoCodigo }}**</p>
-
           <input type="text" class="config-input" (keypress)="verificarTecla($event)">
-
           <button mat-raised-button color="warn">Adicionar Livro</button>
         </div>
       </app-painel-expansivel>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       <app-painel-expansivel titulo="Adicionar Autor">
         <div class="panel-content">
-
           <p>Nome Autor:</p>
           <input type="text" placeholder="Ex: J.R.R. Tolkien" class="config-input">
-
           <p>Gênero preferido:</p>
           <input type="text" placeholder="Ex: Terror" class="config-input">
-
           <button mat-raised-button color="warn">Adicionar Autor</button>
         </div>
       </app-painel-expansivel>
@@ -79,6 +39,7 @@
           <button mat-raised-button color="warn">Adicionar Gênero</button>
         </div>
       </app-painel-expansivel>
+
     </mat-accordion>
   </div>
 </div>
